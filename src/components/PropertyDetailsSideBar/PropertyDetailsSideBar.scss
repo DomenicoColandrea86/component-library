@@ -1,0 +1,120 @@
+.PropertyDetailsSideBar {
+	$font-size-base: 12px;
+	$font-family-base: 'Roboto-Regular', 'Helvetica Neue', Helvetica, Arial,
+		sans-serif;
+	$navbar-height: 70px;
+
+	$blue: #2567ab;
+	$darkBlue: #143e75;
+	$glacier: #f0f2f4;
+	$width: 450px;
+	$padding: 20px;
+	$header-font: 'Roboto Condensed-Bold', $font-family-base;
+	$bold-font: 'Roboto-Bold', $font-family-base;
+	$reg-font: $font-family-base;
+	$toggle-control-height: 10px;
+
+	top: $navbar-height;
+	right: -$width;
+	position: fixed;
+	z-index: 200;
+	width: $width;
+	height: 100%;
+	min-height: 100%;
+	padding: 0 0 0 $padding;
+	background: $glacier;
+	box-shadow: none;
+	transition: all linear 0.2s;
+
+	&--is-open {
+		right: 0;
+		box-shadow: 5px 0 10px 0 rgba(0, 0, 0, 0.6);
+	}
+
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		left: 5px;
+		top: calc(50% - #{$navbar-height});
+		background: transparent;
+		outline: none;
+		padding: 0;
+		width: 0;
+		height: 0;
+		border: 0 solid transparent;
+		border-bottom-width: $toggle-control-height;
+		border-top-width: $toggle-control-height;
+		border-left: solid $toggle-control-height $darkBlue;
+	}
+
+	&__content {
+		height: 100%;
+		min-height: 100%;
+		padding: $padding;
+		background: white;
+	}
+
+	&__header {
+		margin: 0 0 $padding 0;
+		color: $blue;
+		font-size: 18px;
+		font-family: $header-font;
+	}
+
+	&__btn-group {
+		border: 1px solid $blue;
+		overflow: hidden;
+		border-radius: 3px;
+		display: flex;
+	}
+
+	&__btn {
+		padding: 0.4em;
+		border: solid 1px $blue;
+		border-radius: 3px;
+		display: inline-block;
+		text-align: center;
+		flex-grow: 1;
+		flex-basis: 100%;
+		border-radius: 0;
+		border: none;
+		border-right: 1px solid $blue;
+		font-size: 10px;
+		font-family: $bold-font;
+		text-transform: uppercase;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+
+		&:not(.PropertyDetailsSideBar__btn--disabled) {
+			&:hover,
+			&:focus {
+				cursor: pointer;
+				color: white;
+				background-color: $blue;
+			}
+		}
+
+		&:last-child {
+			border-right: none;
+		}
+
+		&--disabled {
+			cursor: not-allowed;
+			color: #767676;
+			background: #f4f7f9;
+		}
+
+		&--active {
+			color: white;
+			background: $blue;
+		}
+	}
+	&__comments {
+		margin-top: $padding;
+		font-family: $reg-font;
+		font-size: $font-size-base;
+	}
+}

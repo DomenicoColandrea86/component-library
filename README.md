@@ -1,8 +1,12 @@
+<img width="150" src="https://www.rcanalytics.com/wp-content/uploads/2020/01/pegasus.png">
+
 # component-library
 
-> Official component library and storybook for RCA
+> The official component library and storybook for RCA
 
-[![NPM](https://img.shields.io/npm/v/component-library.svg)](https://www.npmjs.com/package/component-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+![PRs Welcome](https://img.shields.io/badge/pr's-welcome-7d4cdb.svg)
+![slack](https://img.shields.io/badge/join%20the%20community-slack-fd6fff.svg)
+![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)
 
 ## Install
 
@@ -10,22 +14,7 @@
 npm install --save component-library
 ```
 
-## Usage
-
-```tsx
-import * as React from 'react'
-
-import MyComponent from 'component-library'
-
-class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
-```
 
 ## License
 
-Apache-2.0 © [DomenicoColandrea86](https://github.com/DomenicoColandrea86)
+Apache-2.0 © [Real-Capital](https://github.com/Real-Capital)

@@ -1,0 +1,11 @@
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <style>.st0{fill:none;stroke:#05417B;stroke-width:2;stroke-miterlimit:10;} .st1{fill:#0C7ABF;} .st2{fill:#FCFCFC;}
+        .st3{font-family:&apos;UniversLTStd&apos;;} .st4{font-size:8.9408px;} .st5{fill:#05417C;}
+        .st6{fill:none;stroke:#05417D;stroke-miterlimit:10;} .st7{fill:#05417D;}
+    </style>
+    <path class="st0"
+          d="M2.1 25.9c-.4 0-.7-.5-.4-.8C3 23.3 5.8 19 5.8 16.7c0-3 .3-6.7 1-7.7s5.9-5.5 10.4-.6l.4 4.4 2.5 4.8s2.6 6 4.2 7.9c.2.2 0 .5-.3.5l-21.9-.1z"/>
+    <ellipse class="st5" cx="12.3" cy="4.8" rx="1.8" ry="1.8"/>
+    <ellipse class="st6" cx="12.9" cy="28.3" rx="3.5" ry="2.4"/>
+    <ellipse class="st7" cx="13.5" cy="28.2" rx="2.9" ry="2.1"/>
+</svg>

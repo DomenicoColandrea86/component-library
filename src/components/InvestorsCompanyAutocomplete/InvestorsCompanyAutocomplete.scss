@@ -1,0 +1,160 @@
+.InvestorsCompanyAutocomplete {
+	display: inline-block;
+	position: relative;
+
+	&__search-input-container {
+		position: relative;
+	}
+
+	&__search-input {
+		width: 450px;
+		height: 50px;
+		border-radius: 4px;
+		margin-top: 9px;
+		border-color: #ccc;
+		transition: width 0.2s linear;
+	}
+
+	&__search-button,
+	&__clear-button {
+		position: absolute;
+		background: none;
+		right: 0px;
+		top: 0px;
+		height: 100%;
+		margin: auto;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		transition: opacity 150ms ease-in-out;
+		outline: none;
+		text-align: right;
+	}
+
+	&__search-button {
+		cursor: default;
+	}
+
+	&__clear-button {
+		margin: auto;
+		font-size: 14px;
+		cursor: pointer;
+		color: #2c2c2c;
+	}
+
+	&__input-icon {
+		margin-right: 15px;
+
+		&--search {
+			width: 22px;
+		}
+	}
+
+	&__suggestion-list {
+		max-height: 335px;
+		position: absolute;
+		left: 0;
+		margin: -2px 0 0;
+		padding: 0;
+		min-width: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		border-radius: 0 0 0.2857rem 0.2857rem;
+		z-index: 1;
+		background-color: #fff;
+		box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
+	}
+
+	&__suggestion-item {
+		padding: 4px 10px;
+		text-align: left;
+		list-style: none;
+		min-width: 100%;
+		background-color: #fff;
+		font-size: 12px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		margin: 0;
+		cursor: pointer;
+
+		&:hover,
+		&--is-highlighted {
+			background-color: #f3f3f3;
+		}
+	}
+
+	&__suggestion-item-icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 47px;
+		height: 47px;
+	}
+
+	&__suggestion-item-text {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 10px;
+	}
+
+	@mixin mobile {
+		&__search-input {
+			width: 60px;
+			z-index: 0;
+
+			&::-webkit-input-placeholder {
+				color: transparent;
+			}
+			&::-moz-placeholder {
+				color: transparent;
+			}
+			&:-ms-input-placeholder {
+				color: transparent;
+			}
+			&::-ms-input-placeholder {
+				color: transparent;
+			}
+			&::placeholder {
+				color: transparent;
+			}
+		}
+
+		&__search-button {
+			cursor: pointer;
+			width: calc(100% - 1px);
+			text-align: right;
+		}
+
+		&--is-expanded {
+			.InvestorsCompanyAutocomplete__search-input {
+				width: 350px;
+
+				&::-webkit-input-placeholder {
+					color: grey;
+				}
+				&:-moz-placeholder {
+					/* Firefox 18- */
+					color: grey;
+				}
+
+				&::-moz-placeholder {
+					/* Firefox 19+ */
+					color: grey;
+				}
+
+				&:-ms-input-placeholder {
+					color: grey;
+				}
+			}
+
+			.InvestorsCompanyAutocomplete__search-button {
+				cursor: pointer;
+				width: auto;
+				text-align: right;
+			}
+		}
+	}
+
+	@media (max-width: 1023px) {
+		display: none;
+	}
+}
