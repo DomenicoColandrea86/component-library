@@ -1,4 +1,7 @@
 ---
+  before_script:
+    - "npm i -g codecov"
+    - yarn
   branches:
     only:
       - master
