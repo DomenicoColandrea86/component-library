@@ -9,7 +9,7 @@
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "engines": {
-    "node": "12.13.x",
+    "node": "^12.10.0",
     "npm": "^6.12"
   },
   "scripts": {
