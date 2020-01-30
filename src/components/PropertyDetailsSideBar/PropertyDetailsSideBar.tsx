@@ -40,31 +40,31 @@ const PropertyDetailsSideBar: React.FC<IPropertyDetailsSideBarProps> = ({
 		LoanEventTypes.Watchlist
 	);
 
-	const isDisabled: (type: string) => boolean = type => {
-		let disabled = false;
-		switch (type) {
-			case LoanEventTypes.Watchlist:
-				disabled = !(
-					loan &&
-					loan.watchlistComments &&
-					!!loan.watchlistComments.length
-				);
-				break;
-			case LoanEventTypes.SpecialServicing:
-				disabled = !(
-					loan &&
-					loan.specialServicerComments &&
-					!!loan.specialServicerComments.length
-				);
-				break;
-			case LoanEventTypes.REO:
-				disabled = !(loan && loan.reoComments && !!loan.reoComments.length);
-				break;
-			default:
-				throw new Error('Invalid loan event type');
-		}
-		return disabled;
-	};
+	// const isDisabled: (type: string) => boolean = type => {
+	// 	let disabled = false;
+	// 	switch (type) {
+	// 		case LoanEventTypes.Watchlist:
+	// 			disabled = !(
+	// 				loan &&
+	// 				loan.watchlistComments &&
+	// 				!!loan.watchlistComments.length
+	// 			);
+	// 			break;
+	// 		case LoanEventTypes.SpecialServicing:
+	// 			disabled = !(
+	// 				loan &&
+	// 				loan.specialServicerComments &&
+	// 				!!loan.specialServicerComments.length
+	// 			);
+	// 			break;
+	// 		case LoanEventTypes.REO:
+	// 			disabled = !(loan && loan.reoComments && !!loan.reoComments.length);
+	// 			break;
+	// 		default:
+	// 			throw new Error('Invalid loan event type');
+	// 	}
+	// 	return disabled;
+	// };
 
 	const renderHeader: () => string = () => {
 		let header = '';

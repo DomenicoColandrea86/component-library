@@ -1,3 +1,3 @@
 export const mockHandler = event => {
-    console.log(event);
+	console.log(event);
 };
