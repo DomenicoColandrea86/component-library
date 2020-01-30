@@ -18,4 +18,4 @@ npm install --save component-library
 
 ## License
 
-Apache-2.0 © [Real-Capital](https://github.com/Real-Capital)
+Apache-2.0 © [Real Capital Analytics](https://github.com/Real-Capital)
