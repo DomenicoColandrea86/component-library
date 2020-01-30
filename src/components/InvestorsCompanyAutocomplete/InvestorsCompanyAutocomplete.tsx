@@ -166,6 +166,7 @@ const InvestorsCompanyAutocomplete = ({
 									{items.map((item, index) => {
 										return (
 											<li
+												key={index}
 												{...getItemProps({
 													key: item.id,
 													index,

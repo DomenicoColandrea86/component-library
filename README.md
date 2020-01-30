@@ -4,9 +4,8 @@
 
 > The official component library and storybook for RCA
 
+[![Build Status](https://travis-ci.org/Real-Capital/component-library.svg?branch=master)](https://travis-ci.org/Real-Capital/component-library)
 ![PRs Welcome](https://img.shields.io/badge/pr's-welcome-7d4cdb.svg)
-![slack](https://img.shields.io/badge/join%20the%20community-slack-fd6fff.svg)
-![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)
 
 ## Install
 

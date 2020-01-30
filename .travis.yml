@@ -1,6 +1,5 @@
 ---
   before_script:
-    - "npm i -g codecov"
     - yarn
   branches:
     only:
@@ -10,4 +9,6 @@
   node_js:
     - "12"
   script:
-    - "yarn test && codecov"
+    - "yarn test"
+  after_success:
+    - bash <(curl -s https://codecov.io/bash)
