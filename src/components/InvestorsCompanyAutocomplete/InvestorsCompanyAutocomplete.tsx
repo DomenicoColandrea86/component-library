@@ -10,6 +10,8 @@ import { IBaseFields } from '../../models/base/fields';
 import * as lodash from 'lodash';
 import './InvestorsCompanyAutocomplete.scss';
 
+import iconMagnifyGlass from '../../assets/images/iconMagnifyGlass.svg';
+import iconAutoCompany from '../../assets/images/iconAutoCompany.svg';
 const block = b.with('InvestorsCompanyAutocomplete');
 
 export interface IInvestorsCompanyAutocompleteProps extends IBaseFields {
@@ -148,8 +150,8 @@ const InvestorsCompanyAutocomplete = ({
 												className={block('input-icon', { search: true })}
 												src={
 													isExpanded
-														? '/assets/images/iconMagnifyGlassActive.png'
-														: '/assets/images/iconMagnifyGlass.svg'
+														? iconMagnifyGlass //'/assets/images/iconMagnifyGlassActive.png'
+														: iconMagnifyGlass
 												}
 											/>
 										</button>
@@ -179,7 +181,7 @@ const InvestorsCompanyAutocomplete = ({
 											>
 												<img
 													className={block('suggestion-item-icon')}
-													src="/assets/images/iconAutoCompany.svg"
+													src={iconAutoCompany}
 													data-testid={`${testId}-suggestion-icon`}
 												/>
 												<div

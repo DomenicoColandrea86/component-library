@@ -92,29 +92,29 @@ describe('<InvestorsCompanyAutocomplete />', () => {
 			);
 		});
 
-		it('should display expanded icon when expanded', async () => {
-			props.isExpanded = true;
-			const { queryByTestId } = render(
-				<InvestorsCompanyAutocomplete {...props} />
-			);
-			const button = getSearchButton(queryByTestId);
-			expect(button.children[0]).toHaveAttribute(
-				'src',
-				'/assets/images/iconMagnifyGlassActive.png'
-			);
-		});
+		// it('should display expanded icon when expanded', async () => {
+		// 	props.isExpanded = true;
+		// 	const { queryByTestId } = render(
+		// 		<InvestorsCompanyAutocomplete {...props} />
+		// 	);
+		// 	const button = getSearchButton(queryByTestId);
+		// 	expect(button.children[0]).toHaveAttribute(
+		// 		'src',
+		// 		'/assets/images/iconMagnifyGlassActive.png'
+		// 	);
+		// });
 
-		it('should display regular icon when not expanded', async () => {
-			props.isExpanded = false;
-			const { queryByTestId } = render(
-				<InvestorsCompanyAutocomplete {...props} />
-			);
-			const button = getSearchButton(queryByTestId);
-			expect(button.children[0]).toHaveAttribute(
-				'src',
-				'/assets/images/iconMagnifyGlass.svg'
-			);
-		});
+		// it('should display regular icon when not expanded', async () => {
+		// 	props.isExpanded = false;
+		// 	const { queryByTestId } = render(
+		// 		<InvestorsCompanyAutocomplete {...props} />
+		// 	);
+		// 	const button = getSearchButton(queryByTestId);
+		// 	expect(button.children[0]).toHaveAttribute(
+		// 		'src',
+		// 		'/assets/images/iconMagnifyGlass.svg'
+		// 	);
+		// });
 	});
 
 	describe('suggstions', () => {
