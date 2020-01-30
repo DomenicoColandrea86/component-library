@@ -10,6 +10,4 @@
   node_js:
     - "12"
   script:
-    - "yarn test"
-  after_success:
-    - "codecov"
+    - "yarn test && codecov"
