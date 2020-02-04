@@ -1,5 +1,5 @@
 /**
- * Welcome to @reach/checkbox!
+ * Welcome to @rcanalytics/checkbox!
  *
  * A CustomCheckbox is useful because full control of a native HTML input's
  * design is not always possible. You may want to provide custom check graphics
@@ -30,7 +30,7 @@ import {
 	createNamedContext,
 	useForkedRef,
 	wrapEvent,
-} from '@reach/utils';
+} from '@rcanalytics/utils';
 import {
 	checkedPropToStateValue,
 	MixedOrBool,

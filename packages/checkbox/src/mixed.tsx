@@ -23,11 +23,10 @@
  * If you don't need an indeterminate state, you should probably just use a
  * native HTML input for your checkboxes. But of course, sometimes designers
  * have some other ideas that call for a custom solution. In that case, the
- * @reach/checkbox/custom package provides a customizable wrapper element that
+ * @rcanalytics/checkbox/custom package provides a customizable wrapper element that
  * can be styled to fit your needs.
  *
- * @see Docs     https://reacttraining.com/reach-ui/checkbox#mixedcheckbox
- * @see Source   https://github.com/reach/reach-ui/tree/master/packages/checkbox/src/mixed
+ * @see Source   https://github.com/Real-Capital/component-library/tree/master/packages/checkbox/src/mixed
  * @see WAI-ARIA https://www.w3.org/TR/wai-aria-practices-1.1/#checkbox
  */
 
@@ -43,7 +42,7 @@ import {
 	useForkedRef,
 	useIsomorphicLayoutEffect,
 	wrapEvent,
-} from '@reach/utils';
+} from '@rcanalytics/utils';
 import {
 	assign,
 	createMachine,

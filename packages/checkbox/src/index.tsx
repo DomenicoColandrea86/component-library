@@ -1,5 +1,5 @@
 /**
- * Welcome to @reach/checkbox!
+ * Welcome to @rcanalytics/checkbox!
  *
  * Accessible components to build custom, tri-state checkboxes in React.
  *
@@ -7,8 +7,7 @@
  *   - MixedCheckbox
  *   - CustomCheckbox
  *
- * @see Docs     https://reacttraining.com/reach-ui/checkbox
- * @see Source   https://github.com/reach/reach-ui/tree/master/packages/checkbox
+ * @see Source   https://github.com/Real-Capital/component-library/tree/master/packages/checkbox
  * @see WAI-ARIA https://www.w3.org/TR/wai-aria-practices-1.1/#checkbox
  */
 
