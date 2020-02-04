@@ -1,13 +1,25 @@
----
-  before_script:
-    - "npm i -g codecov"
-    - yarn
-  branches:
-    only:
-      - master
-  cache: yarn
-  language: node_js
-  node_js:
-    - "12"
-  script:
-    - "yarn test && codecov"
+language: node_js
+node_js: node
+before_script:
+  - "npm i -g codecov"
+  - yarn
+branches:
+  only:
+    - master
+cache: yarn
+jobs:
+  include:
+  - stage: Test
+    before_script: yarn build
+    script: yarn test
+  # - stage: Release
+  #   if: tag =~ ^v[0-9]
+  #   before_script: yarn build
+  #   script: echo "Publishing $TRAVIS_TAG to npm ..."
+  #   before_deploy: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > "$HOME/.npmrc"
+  #   deploy:
+  #     provider: script
+  #     skip_cleanup: true
+  #     script: lerna publish from-git --yes --pre-dist-tag next
+  #     on:
+  #       tags: true

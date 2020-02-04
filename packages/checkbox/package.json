@@ -1,0 +1,37 @@
+{
+	"name": "@rca-component-library/checkbox",
+	"version": "0.0.0",
+	"description": "Accessible components to build custom, tri-state checkboxes in React.",
+	"author": "Real Capital",
+	"license": "Apache-2.0",
+	"source": "",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/real-capital/component-library.git",
+		"directory": "packages/checkbox"
+	},
+	"scripts": {
+		"build": "yarn clean && yarn compile",
+		"clean": "rm -rf ./dist",
+		"compile": "cross-env NODE_ENV=production tsdx build --format=cjs,esm --tsconfig tsconfig.build.json"
+	},
+	"dependencies": {
+		"@reach/auto-id": "^0.8.0",
+		"@reach/utils": "^0.8.0",
+		"@xstate/fsm": "^1.3.0",
+		"tslib": "1.10.0",
+		"warning": "^4.0.3"
+	},
+	"peerDependencies": {
+		"react": "^16.8.0",
+		"react-dom": "^16.8.0"
+	},
+	"main": "dist/index.js",
+	"module": "dist/checkbox.esm.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"README.md",
+		"dist",
+		"styles.css"
+	]
+}
