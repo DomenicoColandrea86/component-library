@@ -1,4 +1,4 @@
-// import { checkStyles } from "@rca-component-library/utils";
+// import { checkStyles } from "@rcanalytics/utils";
 import '@testing-library/jest-dom/extend-expect';
 
 beforeEach(() => {

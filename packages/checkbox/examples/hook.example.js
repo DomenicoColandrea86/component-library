@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { useMixedCheckbox } from '@rca-component-library/checkbox';
-import '@rca-component-library/checkbox/styles.css';
+import { useMixedCheckbox } from '@rcanalytics/checkbox';
+import '@rcanalytics/checkbox/styles.css';
 
 let name = 'With useMixedCheckbox hook';
 

@@ -4,8 +4,8 @@ import React, {
 	useLayoutEffect,
 	useReducer,
 } from 'react';
-import { CustomCheckbox } from '@rca-component-library/checkbox';
-import '@rca-component-library/checkbox/styles.css';
+import { CustomCheckbox } from '@rcanalytics/checkbox';
+import '@rcanalytics/checkbox/styles.css';
 
 let name = 'CustomCheckbox Group';
 

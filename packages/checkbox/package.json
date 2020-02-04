@@ -1,5 +1,5 @@
 {
-	"name": "@rca-component-library/checkbox",
+	"name": "@rcanalytics/checkbox",
 	"version": "0.0.0",
 	"description": "Accessible components to build custom, tri-state checkboxes in React.",
 	"author": "Real Capital",

@@ -83,13 +83,13 @@ if (__DEV__) {
 			) !== 1
 		) {
 			console.warn(
-				`@rca-component-library/${packageName} styles not found. If you are using a bundler like webpack or parcel include this in the entry file of your app before any of your own styles:
+				`@rcanalytics/${packageName} styles not found. If you are using a bundler like webpack or parcel include this in the entry file of your app before any of your own styles:
 
-    import "@rca-component-library/${packageName}/styles.css";
+    import "@rcanalytics/${packageName}/styles.css";
 
   Otherwise you'll need to include them some other way:
 
-    <link rel="stylesheet" type="text/css" href="node_modules/@rca-component-library/${packageName}/styles.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/@rcanalytics/${packageName}/styles.css" />
   `
 			);
 		}

@@ -6,11 +6,11 @@ const packagesDir = path.resolve(__dirname, '../packages');
 const packages = fs.readdirSync(packagesDir);
 
 const alias = packages.reduce((memo, pkg) => {
-	memo[`@rca-component-library/${pkg}/styles.css`] = path.join(
+	memo[`@rcanalytics/${pkg}/styles.css`] = path.join(
 		packagesDir,
 		`${pkg}/styles.css`
 	);
-	memo[`@rca-component-library/${pkg}`] = path.join(packagesDir, `${pkg}/src`);
+	memo[`@rcanalytics/${pkg}`] = path.join(packagesDir, `${pkg}/src`);
 	return memo;
 }, {});
 

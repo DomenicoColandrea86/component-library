@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import {
 	CustomCheckboxContainer,
 	CustomCheckboxInput,
-} from '@rca-component-library/checkbox';
-import '@rca-component-library/checkbox/styles.css';
+} from '@rcanalytics/checkbox';
+import '@rcanalytics/checkbox/styles.css';
 
 let name = 'CustomCheckbox Composed';
 

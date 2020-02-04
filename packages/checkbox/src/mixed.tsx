@@ -424,7 +424,7 @@ export function stateValueToChecked(state: string) {
 	return state === MixedCheckboxStates.Checked ? true : false;
 }
 
-// TODO: Move to @rca-component-library/utils
+// TODO: Move to @rcanalytics/utils
 export function useControlledSwitchWarning(
 	controlPropValue: any,
 	controlPropName: string,

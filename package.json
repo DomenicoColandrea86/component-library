@@ -1,5 +1,5 @@
 {
-	"name": "rca-component-library",
+	"name": "component-library",
 	"version": "0.0.0",
 	"description": "the official component library and storybook for RCA",
 	"private": true,

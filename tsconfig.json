@@ -3,7 +3,8 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@rca-component-library/checkbox": ["packages/checkbox/src"],
+			"@rcanalytics/checkbox": ["packages/checkbox/src"],
+			"@rcanalytics/utils": ["packages/utils/src"],
 			"$test/*": ["test/*"]
 		}
 	}
