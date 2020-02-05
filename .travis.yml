@@ -13,14 +13,14 @@ jobs:
   - stage: Test
     before_script: yarn build
     script: yarn test
-  # - stage: Release
-  #   if: tag =~ ^v[0-9]
-  #   before_script: yarn build
-  #   script: echo "Publishing $TRAVIS_TAG to npm ..."
-  #   before_deploy: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > "$HOME/.npmrc"
-  #   deploy:
-  #     provider: script
-  #     skip_cleanup: true
-  #     script: lerna publish from-git --yes --pre-dist-tag next
-  #     on:
-  #       tags: true
+  - stage: Release
+    if: tag =~ ^v[0-9]
+    before_script: yarn build
+    script: echo "Publishing $TRAVIS_TAG to npm ..."
+    before_deploy: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > "$HOME/.npmrc"
+    deploy:
+      provider: script
+      skip_cleanup: true
+      script: lerna publish from-git --yes --pre-dist-tag next
+      on:
+        tags: true
