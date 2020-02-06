@@ -84,7 +84,7 @@ yarn test --watch
 
 ## Releases
 
-This is our current release process. It's not perfect, but it has almost the right balance of manual + automation for me. We might be able to put some of this in a script...
+This is our current release process. We might be able to put some of this in a script...
 
 ```sh
 # First, run the build locally and make sure there are no problems
