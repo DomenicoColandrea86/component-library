@@ -1,6 +1,6 @@
 {
 	"name": "@rcanalytics/utils",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Internal, shared utilities for Reach UI.",
 	"author": "Real Capital <hello@rcanalytics.com>",
 	"license": "Apache-2.0",
