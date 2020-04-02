@@ -1,6 +1,6 @@
 {
 	"name": "component-library",
-	"version": "0.0.0",
+	"version": "0.0.2",
 	"description": "the official component library and storybook for RCA",
 	"private": true,
 	"author": "Real Capital <hello@rcanalytics.com>",
@@ -18,6 +18,7 @@
 		"build:changed": "lerna run build --since origin/master",
 		"build": "lerna run build --stream",
 		"ver": "lerna version --no-push",
+		"publish": "lerna publish from-git --yes --pre-dist-tag next",
 		"changes": "dotenv lerna-changelog",
 		"clean": "git clean -fdX .",
 		"lint": "eslint .",
