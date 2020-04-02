@@ -1,0 +1,239 @@
+@mixin Table(
+	$font-size: 12px,
+	$fixed-header-height: 0,
+	$fixed-table-height: 'auto',
+	$header-bg-color: #0065a4,
+	$header-text-color: white,
+	$body-bg-color: white,
+	$body-text-color: black,
+	$alternating-row-bg-color: #f4f7f9
+) {
+	$line-height: $font-size * 4 / 3;
+	background-color: $header-bg-color;
+	font-family: 'Roboto Condensed';
+	position: relative;
+	padding-top: $fixed-header-height;
+	font-family: 'Roboto Condensed-Regular', 'Roboto-Regular', sans-serif;
+
+	/*
+   * If fixed table height is greater than 0 than we inject a bunch of styles
+   * that are provide 'fixed' styling. Since this feature is opt-in, we don't
+   * want to include as to minimize css bloat.
+   */
+
+	@if $fixed-table-height != 0 {
+		&__viewport {
+			overflow-y: auto;
+			overflow-x: hidden;
+			background: #fff;
+			height: $fixed-table-height;
+		}
+
+		&__header-row {
+			&--is-fixed {
+				th {
+					height: 0;
+					line-height: 0;
+					padding-top: 0;
+					padding-bottom: 0;
+					border: none;
+					white-space: nowrap;
+				}
+			}
+		}
+
+		&__header-cell-fixed-content {
+			position: absolute;
+			top: 0;
+			width: inherit;
+			/*
+     The original RCA implementation of this was to usie padding/margins. Updating to use flex, but leaving original here in case we need to revert
+     */
+			// margin-left: -$padding-pixels;
+			// margin-right: -$padding-pixels;
+			// padding: $padding-pixels ($padding-pixels *2) $padding-pixels $padding-pixels;
+			height: $fixed-header-height - ($line-height / 2);
+			line-height: $line-height;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: center;
+
+			/*
+    The Webkit specific command -webkit-transform: translateZ(0) is needed for Chrome and other
+    webkit based browsers as there's an issue re-rendering the headers as elements are scroll
+    beneath them. Adding this command forces Webkit to use hardware based rendering to update
+    this element on a more continuous process.
+    More Info: http://stackoverflow.com/a/18764086/1527160
+    Chrome Defect: https://code.google.com/p/chromium/issues/detail?id=288747
+    RCA Defect: https://rcanalytics.codefactori.com/jira/browse/CD-8270
+    */
+			-webkit-transform: translateZ(0);
+		}
+	}
+
+	&__table {
+		width: 100%;
+		text-align: left;
+		border-collapse: separate;
+		border-spacing: 0px;
+	}
+
+	&__body-row {
+		background-color: $body-bg-color;
+
+		&:nth-of-type(odd) {
+			background-color: $alternating-row-bg-color;
+		}
+	}
+
+	&__header-cell {
+		background-color: $header-bg-color;
+		color: $header-text-color;
+		vertical-align: bottom;
+		padding-bottom: 5px;
+		font-weight: bold;
+	}
+
+	&__body-cell {
+		color: $body-text-color;
+		font-weight: normal;
+		padding: 8px 0px;
+	}
+
+	&__header-cell,
+	&__body-cell {
+		font-size: $font-size;
+		line-height: $line-height;
+
+		&:first-child {
+			padding-left: 10px;
+		}
+
+		&:last-child {
+			padding-right: 10px;
+		}
+	}
+
+	&__table-link {
+		color: $header-bg-color;
+		transition: opacity 200ms ease-in-out;
+		margin: 0;
+		padding: 0;
+		outline: none;
+		background: unset;
+		border: 0;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.8;
+			text-decoration: underline;
+		}
+	}
+}
+
+// storybook styles
+.TestTable--fixed {
+	@include Table(
+		$fixed-header-height: 30px,
+		$fixed-table-height: calc(100vh - 400px)
+	);
+
+	&__body-cell {
+		$not-selected-border: 2px solid transparent;
+		border-top: $not-selected-border;
+		border-bottom: $not-selected-border;
+		transition: border 200ms ease-in-out;
+
+		&:first-child {
+			border-left: $not-selected-border;
+		}
+
+		&:last-child {
+			border-right: $not-selected-border;
+		}
+
+		&--comments {
+			position: relative;
+		}
+	}
+
+	&__body-row--is-selectable {
+		cursor: pointer;
+	}
+
+	&__body-row--is-selected {
+		.TestTable--fixed__body-cell {
+			$selected-border: 2px solid #e87d1e;
+			border-top: $selected-border;
+			border-bottom: $selected-border;
+
+			&:first-child {
+				border-left: $selected-border;
+			}
+
+			&:last-child {
+				border-right: $selected-border;
+			}
+		}
+	}
+	&__header-cell,
+	&__body-cell {
+		&--date {
+			min-width: 80px;
+		}
+		&--property-name {
+			min-width: 170px;
+		}
+		&--property-geo {
+			min-width: 130px;
+		}
+		&--property-type {
+			min-width: 60px;
+		}
+		&--size {
+			min-width: 70px;
+		}
+		&--comments {
+			min-width: 200px;
+			max-width: 200px;
+
+			div {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	&__header-cell {
+		padding: 6px;
+		&--view-button {
+			button {
+				top: 3px;
+				text-transform: uppercase;
+			}
+		}
+		&--property-geo {
+			.TestTable--fixed__header-cell-fixed-content {
+				flex-direction: row;
+				align-items: flex-end;
+			}
+		}
+	}
+
+	&__body-geo-city {
+		padding-right: 5px;
+	}
+	&__body-geo-state {
+		padding-right: 2px;
+	}
+	&__body-geo-country,
+	&__qualifier {
+		font-size: 10px;
+		color: #757575;
+	}
+
+	.TableSorter {
+		color: white;
+		line-height: inherit;
+	}
+}

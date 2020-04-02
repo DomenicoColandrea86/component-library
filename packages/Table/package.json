@@ -1,14 +1,14 @@
 {
-	"name": "@rcanalytics/checkbox",
-	"version": "0.0.1",
-	"description": "Accessible components to build custom, tri-state checkboxes in React.",
-	"author": "Real Capital",
+	"name": "@rcanalytics/table",
+	"version": "0.0.0",
+	"description": "Accessible components to build custom tables in React.",
+	"author": "rcanalytics",
 	"license": "Apache-2.0",
 	"source": "",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/real-capital/component-library.git",
-		"directory": "packages/checkbox"
+		"url": "git+https://github.com/rcanalytics/component-library.git",
+		"directory": "packages/table"
 	},
 	"scripts": {
 		"build": "yarn clean && yarn compile",
@@ -26,11 +26,14 @@
 		"react-dom": "^16.8.0"
 	},
 	"main": "dist/index.js",
-	"module": "dist/checkbox.esm.js",
+	"module": "dist/table.esm.js",
 	"typings": "dist/index.d.ts",
 	"files": [
 		"README.md",
 		"dist",
 		"styles.css"
-	]
+	],
+	"devDependencies": {
+		"@types/lodash": "^4.14.149"
+	}
 }

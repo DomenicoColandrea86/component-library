@@ -1,0 +1,210 @@
+.TestTable--fixed {
+	background-color: #0065a4;
+	font-family: 'Roboto Condensed';
+	position: relative;
+	padding-top: 30px;
+	font-family: 'Roboto Condensed-Regular', 'Roboto-Regular', sans-serif;
+	/*
+   * If fixed table height is greater than 0 than we inject a bunch of styles
+   * that are provide 'fixed' styling. Since this feature is opt-in, we don't
+   * want to include as to minimize css bloat.
+   */
+}
+.TestTable--fixed__viewport {
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: #fff;
+	height: calc(100vh - 400px);
+}
+.TestTable--fixed__header-row--is-fixed th {
+	height: 0;
+	line-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: none;
+	white-space: nowrap;
+}
+.TestTable--fixed__header-cell-fixed-content {
+	position: absolute;
+	top: 0;
+	width: inherit;
+	/*
+     The original RCA implementation of this was to usie padding/margins. Updating to use flex, but leaving original here in case we need to revert
+     */
+	height: 22px;
+	line-height: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	/*
+    The Webkit specific command -webkit-transform: translateZ(0) is needed for Chrome and other
+    webkit based browsers as there's an issue re-rendering the headers as elements are scroll
+    beneath them. Adding this command forces Webkit to use hardware based rendering to update
+    this element on a more continuous process.
+    More Info: http://stackoverflow.com/a/18764086/1527160
+    Chrome Defect: https://code.google.com/p/chromium/issues/detail?id=288747
+    RCA Defect: https://rcanalytics.codefactori.com/jira/browse/CD-8270
+    */
+	-webkit-transform: translateZ(0);
+}
+.TestTable--fixed__table {
+	width: 100%;
+	text-align: left;
+	border-collapse: separate;
+	border-spacing: 0px;
+}
+.TestTable--fixed__body-row {
+	background-color: white;
+}
+.TestTable--fixed__body-row:nth-of-type(odd) {
+	background-color: #f4f7f9;
+}
+.TestTable--fixed__header-cell {
+	background-color: #0065a4;
+	color: white;
+	vertical-align: bottom;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+.TestTable--fixed__body-cell {
+	color: black;
+	font-weight: normal;
+	padding: 8px 0px;
+}
+.TestTable--fixed__header-cell,
+.TestTable--fixed__body-cell {
+	font-size: 12px;
+	line-height: 16px;
+}
+.TestTable--fixed__header-cell:first-child,
+.TestTable--fixed__body-cell:first-child {
+	padding-left: 10px;
+}
+.TestTable--fixed__header-cell:last-child,
+.TestTable--fixed__body-cell:last-child {
+	padding-right: 10px;
+}
+.TestTable--fixed__table-link {
+	color: #0065a4;
+	transition: opacity 200ms ease-in-out;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	background: unset;
+	border: 0;
+	cursor: pointer;
+}
+.TestTable--fixed__table-link:hover {
+	opacity: 0.8;
+	text-decoration: underline;
+}
+.TestTable--fixed__body-cell {
+	border-top: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transition: border 200ms ease-in-out;
+}
+.TestTable--fixed__body-cell:first-child {
+	border-left: 2px solid transparent;
+}
+.TestTable--fixed__body-cell:last-child {
+	border-right: 2px solid transparent;
+}
+.TestTable--fixed__body-cell--comments {
+	position: relative;
+}
+.TestTable--fixed__body-row--is-selectable {
+	cursor: pointer;
+}
+.TestTable--fixed__body-row--is-selected .TestTable--fixed__body-cell {
+	border-top: 2px solid #e87d1e;
+	border-bottom: 2px solid #e87d1e;
+}
+.TestTable--fixed__body-row--is-selected
+	.TestTable--fixed__body-cell:first-child {
+	border-left: 2px solid #e87d1e;
+}
+.TestTable--fixed__body-row--is-selected
+	.TestTable--fixed__body-cell:last-child {
+	border-right: 2px solid #e87d1e;
+}
+.TestTable--fixed__header-cell--date,
+.TestTable--fixed__body-cell--date {
+	min-width: 80px;
+}
+.TestTable--fixed__header-cell--property-name,
+.TestTable--fixed__body-cell--property-name {
+	min-width: 170px;
+}
+.TestTable--fixed__header-cell--property-geo,
+.TestTable--fixed__body-cell--property-geo {
+	min-width: 130px;
+}
+.TestTable--fixed__header-cell--property-type,
+.TestTable--fixed__body-cell--property-type {
+	min-width: 60px;
+}
+.TestTable--fixed__header-cell--size,
+.TestTable--fixed__body-cell--size {
+	min-width: 70px;
+}
+.TestTable--fixed__header-cell--comments,
+.TestTable--fixed__body-cell--comments {
+	min-width: 200px;
+	max-width: 200px;
+}
+.TestTable--fixed__header-cell--comments div,
+.TestTable--fixed__body-cell--comments div {
+	vertical-align: middle;
+}
+.TestTable--fixed__header-cell {
+	padding: 6px;
+}
+.TestTable--fixed__header-cell--view-button button {
+	top: 3px;
+	text-transform: uppercase;
+}
+.TestTable--fixed__header-cell--property-geo
+	.TestTable--fixed__header-cell-fixed-content {
+	flex-direction: row;
+	align-items: flex-end;
+}
+.TestTable--fixed__body-geo-city {
+	padding-right: 5px;
+}
+.TestTable--fixed__body-geo-state {
+	padding-right: 2px;
+}
+.TestTable--fixed__body-geo-country,
+.TestTable--fixed__qualifier {
+	font-size: 10px;
+	color: #757575;
+}
+.TestTable--fixed .TableSorter {
+	color: white;
+	line-height: inherit;
+}
+
+.TableSorter {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	background: none;
+	outline: none;
+	direction: ltr;
+}
+.TableSorter--multi-right,
+.TableSorter--multi-left {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+}
+.TableSorter__multi-container {
+	display: flex;
+	flex-direction: column;
+}
+.TableSorter__icon {
+	padding-right: 5px;
+	color: #e87d1e;
+	line-height: inherit;
+}
