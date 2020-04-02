@@ -3,8 +3,6 @@
 # component-library
 
 > UI component library and storybook for Real Capital Analytics
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d7b3cf9bb9f14a9b8b2bada334c399bf)](https://www.codacy.com/gh/Real-Capital/component-library?utm_source=github.com&utm_medium=referral&utm_content=Real-Capital/component-library&utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/Real-Capital/component-library.svg?branch=master)](https://travis-ci.org/Real-Capital/component-library)
 [![Blazing Fast](https://badgen.now.sh/badge/speed/blazing%20%F0%9F%94%A5/green)](https://github.com/Real-Capital/component-library)
 ![PRs Welcome](https://img.shields.io/badge/PR's-welcome-7d4cdb.svg)
