@@ -15,7 +15,7 @@ component-library is built and tested with [Yarn](https://yarnpkg.com). Please f
 Then, run these commands:
 
 ```
-git clone git@github.com:Real-Capital/component-library.git
+git clone git@github.com:rcanalytics/component-library.git
 cd component-library
 yarn install
 yarn build
