@@ -4,7 +4,7 @@ module.exports = {
 	url: 'https://your-docusaurus-test-site.com',
 	baseUrl: '/',
 	favicon: 'img/favicon.ico',
-	organizationName: 'Real-Capital',
+	organizationName: 'Real Capital Analytics',
 	projectName: 'component-library',
 	themeConfig: {
 		disableDarkMode: true,
@@ -15,14 +15,14 @@ module.exports = {
 				src: 'img/logo.svg',
 			},
 			links: [
-				{ to: 'docs/doc1', label: 'Docs', position: 'left' },
+				{ to: 'docs/table', label: 'Docs', position: 'left' },
 				{
 					href: 'https://engineering.rcanalytics.io:8443/',
 					label: 'Blog',
 					position: 'left',
 				},
 				{
-					href: 'https://github.com/Real-Capital/component-library',
+					href: 'https://github.com/rcanalytics/component-library',
 					label: 'GitHub',
 					position: 'right',
 				},
@@ -30,34 +30,6 @@ module.exports = {
 		},
 		footer: {
 			style: 'light',
-			links: [
-				{
-					title: 'Docs',
-					items: [
-						{
-							label: 'Style Guide',
-							to: 'docs/doc1',
-						},
-						{
-							label: 'API',
-							to: 'docs/doc2',
-						},
-					],
-				},
-				{
-					title: 'Social',
-					items: [
-						{
-							label: 'Blog',
-							href: 'https://engineering.rcanalytics.io:8443/',
-						},
-						{
-							label: 'Open Source',
-							href: 'https://github.com/Real-Capital',
-						},
-					],
-				},
-			],
 			copyright: `Copyright © ${new Date().getFullYear()} Real Capital Analytics.`,
 		},
 	},
