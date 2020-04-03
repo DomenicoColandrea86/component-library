@@ -1,7 +1,7 @@
 import { addDecorator, configure } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import 'pepjs';
-import './styles.css';
+import './styles.scss';
 
 configure(() => {
 	const req = require.context(

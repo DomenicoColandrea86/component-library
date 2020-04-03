@@ -1,0 +1,51 @@
+@import "@rcanalytics/Table/Table.scss";
+// uses exposed SASS Mixin, `Table()`
+.TestTable--fixed {
+  // fixed Table mixin
+	@include Table(
+		$fixed-header-height: 30px,
+		$fixed-table-height: calc(100vh - 400px)
+  );
+  // custom styles
+	&__header-cell,
+	&__body-cell {
+		&--date {
+			min-width: 80px;
+		}
+		&--property-name {
+			min-width: 170px;
+		}
+		&--property-geo {
+			min-width: 130px;
+		}
+		&--size {
+			min-width: 70px;
+		}
+		&--comments {
+			min-width: 200px;
+			max-width: 200px;
+		}
+	}
+	&__header-cell {
+		padding: 6px;
+		&--property-geo {
+			.TestTable--fixed__header-cell-fixed-content {
+				flex-direction: row;
+				align-items: flex-end;
+			}
+		}
+	}
+  &__body-geo-city,
+  &__body-geo-state {
+		padding-right: 5px;
+	}
+	&__body-geo-country,
+	&__qualifier {
+		font-size: 10px;
+		color: #757575;
+	}
+	.TableSorter {
+		color: white;
+		line-height: inherit;
+	}
+}

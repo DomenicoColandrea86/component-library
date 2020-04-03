@@ -1,8 +1,9 @@
 import React from 'react';
 import { Table, TableSorter, handleSortClick } from '@rcanalytics/table';
 import '@rcanalytics/table/styles.css';
+import './styles.scss';
 
-const name = 'Fixed - styled';
+const name = 'Fixed';
 
 function Example() {
 	const handleCellClick = ({ event }) => event.preventDefault();

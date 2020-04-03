@@ -15,7 +15,7 @@ module.exports = {
 				inject: true,
 			}),
 			copy({
-				targets: [{ src: 'src/Table.scss', dest: 'dist' }],
+        targets: [{ src: 'src/Table.scss', dest: 'dist' }],
 			})
 		);
 		return config;

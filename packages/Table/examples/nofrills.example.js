@@ -1,9 +1,6 @@
 import React from 'react';
-import { Table, TableSorter, handleSortClick } from '@rcanalytics/table';
-import '@rcanalytics/table/styles.css';
-
-const name = 'Basic';
-
+import { Table } from '@rcanalytics/Table';
+const name = 'No Frills';
 function Example() {
 	let data = [
 		{
@@ -119,22 +116,22 @@ function Example() {
 		{
 			id: 'date',
 			header: 'Date',
-			cellRenderer: row => row.date,
+			cellAccessor: 'date',
 		},
 		{
 			id: 'property-name',
 			header: 'Property Name',
-			cellRenderer: row => row.propertyName,
+			cellAccessor: 'propertyName',
 		},
 		{
 			id: 'size',
-			header: 'Size',
-			cellRenderer: row => row.size,
+      header: 'Size',
+      cellAccessor: 'size',
 		},
 		{
 			id: 'comments',
-			header: 'Comments',
-			cellRenderer: row => row.comments,
+      header: 'Comments',
+      cellAccessor: 'comments',
 		},
 	];
 	let props = {

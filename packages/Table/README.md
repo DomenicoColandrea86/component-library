@@ -1,6 +1,6 @@
 # @rcanalytics/table
 
-[Docs]() | [Source](https://github.com/rcanalytics/component-library/tree/master/packages/checkbox) | [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices-1.1/#checkbox)
+[Docs]() | [Source](https://github.com/rcanalytics/component-library/tree/master/packages/table) | [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices-1.1/#table)
 
 Accessible components to build custom tables in React.
 
