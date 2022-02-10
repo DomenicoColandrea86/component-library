@@ -86,7 +86,7 @@
 		"lodash": "^4.17.15",
 		"lodash-es": "^4.17.15",
 		"match-sorter": "^4.0.2",
-		"node-sass": "^4.13.1",
+		"node-sass": "^7.0.0",
 		"patch-package": "^6.2.0",
 		"pepjs": "0.5.2",
 		"postinstall-postinstall": "^2.0.0",
